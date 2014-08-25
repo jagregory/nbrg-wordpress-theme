@@ -1,0 +1,26 @@
+/*
+ Theme Name: nbrg
+ Theme URI: http://www.nbrg.com.au
+ Github Theme URI: https://github.com/jagregory/nbrg-wordpress-theme.git
+ Version: 1.0.1
+ Template: premier.1.0.5
+*/
+
+@import url("../premier.1.0.5/style.css");
+
+.tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
+  font-size: 0.98rem;
+}
+
+.player-thumbnail .player-number {
+  background: #000;
+  color: #fff;
+  display: block;
+  float: none;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0.5rem;
+  position: absolute;
+  text-align: center;
+}

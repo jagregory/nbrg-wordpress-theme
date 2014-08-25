@@ -31,6 +31,7 @@ get_header(); ?>
   // $common[ __( 'Nationality', 'sportspress' ) ] = $country_name ? ( $show_nationality_flags ? '<img src="' . plugin_dir_url( SP_PLUGIN_FILE ) . '/assets/images/flags/' . strtolower( $nationality ) . '.png" alt="' . $nationality . '"> ' : '' ) . $country_name : '&mdash;';
 
   $data = array_merge( $metrics_before, $common, $metrics_after );
+  $has_profile = !empty($data);
 
   if ( $positions )
     $infobox_classes = 'large-6 large-pull-3';
@@ -95,32 +96,39 @@ get_header(); ?>
         endif;
         ?>
       </div><!-- .columns -->
-      <?php if ( get_the_content() ): ?>
-      <div class="<?php echo $infobox_classes; ?> columns">
+      <div class="large-9 medium-6 columns">
         <div class="infobox">
-          <div class="entry-content">
-            <h2><?php _e( 'Bio', 'nbrg' ); ?></h2>
-            <?php the_content(); ?>
-          </div>
+          <?php if (!$has_profile && get_the_content()) { ?>
+            <div class="entry-content">
+              <h2><?php _e( 'Q&A', 'nbrg' ); ?></h2>
+              <?php the_content(); ?>
+            </div>
+          <?php } else { ?>
+            <h2><?php _e( 'Player Profile', 'nbrg' ); ?></h2>
+            <div class="row">
+              <?php foreach ( $data as $label => $value ): if ( $value == null ) continue; ?>
+                <div class="large-6 medium-3 columns">
+                  <small><?php echo $label; ?></small>
+                  <h4><?php echo $value; ?></h4>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          <?php } ?>
         </div>
       </div><!-- .columns -->
-      <?php endif; ?>
     </div><!-- .row -->
   </div><!-- .player-main -->
   <div class="row">
-    <div class="large-6 columns">
+    <?php if ( $has_profile && get_the_content() ): ?>
+    <div class="<?php echo $infobox_classes; ?> columns">
       <div class="infobox">
-        <h2><?php _e( 'Stats', 'nbrg' ); ?></h2>
-        <div class="row">
-          <?php foreach ( $data as $label => $value ): if ( $value == null ) continue; ?>
-            <div class="large-6 medium-3 columns">
-              <small><?php echo $label; ?></small>
-              <h4><?php echo $value; ?></h4>
-            </div>
-          <?php endforeach; ?>
+        <div class="entry-content">
+          <h2><?php _e( 'Q&A', 'nbrg' ); ?></h2>
+          <?php the_content(); ?>
         </div>
       </div>
     </div><!-- .columns -->
+    <?php endif; ?>
     <div class="<?php echo get_the_content() ? 'large-6' : 'large-12'; ?> columns">
       <?php sp_get_template( 'player-statistics.php' ); ?>
       <?php if ( has_excerpt() ): ?>

@@ -32,11 +32,6 @@ get_header(); ?>
 
   $data = array_merge( $metrics_before, $common, $metrics_after );
   $has_profile = !empty($data);
-
-  if ( $positions )
-    $infobox_classes = 'large-6 large-pull-3';
-  else
-    $infobox_classes = 'large-9';
 ?>
 
 <div class="infinity team-name">
@@ -120,7 +115,7 @@ get_header(); ?>
   </div><!-- .player-main -->
   <div class="row">
     <?php if ( $has_profile && get_the_content() ): ?>
-    <div class="<?php echo $infobox_classes; ?> columns">
+    <div class="large-12 columns">
       <div class="infobox">
         <div class="entry-content">
           <h2><?php _e( 'Q&A', 'nbrg' ); ?></h2>
@@ -130,7 +125,6 @@ get_header(); ?>
     </div><!-- .columns -->
     <?php endif; ?>
     <div class="<?php echo get_the_content() ? 'large-6' : 'large-12'; ?> columns">
-      <?php sp_get_template( 'player-statistics.php' ); ?>
       <?php if ( has_excerpt() ): ?>
       <div class="sp-excerpt">
         <?php echo apply_filters( 'the_content', get_the_excerpt() ); ?>

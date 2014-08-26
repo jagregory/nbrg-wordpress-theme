@@ -102,7 +102,7 @@ get_header(); ?>
             <h2><?php _e( 'Player Profile', 'nbrg' ); ?></h2>
             <div class="row">
               <?php foreach ( $data as $label => $value ): if ( $value == null ) continue; ?>
-                <div class="large-6 medium-3 columns">
+                <div class="large-6 medium-6 columns">
                   <small><?php echo $label; ?></small>
                   <h4><?php echo $value; ?></h4>
                 </div>

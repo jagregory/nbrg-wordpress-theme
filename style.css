@@ -24,3 +24,12 @@
   position: absolute;
   text-align: center;
 }
+
+.player-position {
+  float: left;
+  margin-bottom: 1.875rem;
+}
+
+.player-position h5 {
+  margin-bottom: 0;
+}

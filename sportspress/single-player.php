@@ -59,7 +59,7 @@ get_header(); ?>
           <?php endif; ?>
         </div>
       </div><!-- .columns -->
-      <div class="large-3 large-push-6 medium-6 columns">
+      <div class="large-6 medium-6 columns">
         <?php
         if ( $positions ):
           foreach( $positions as $position ):

@@ -9,7 +9,7 @@
  Author URI: http://www.jagregory.com
 */
 
-@import url("../premier.1.0.7/style.css");
+@import url("../premier/style.css");
 
 .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
   font-size: 0.98rem;

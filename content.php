@@ -19,11 +19,11 @@ $is_sp_core = in_array( get_post_type(), array( 'sp_event', 'sp_calendar', 'sp_t
     if ( is_singular( 'sp_sponsor' ) ):
       the_post_thumbnail( 'sportspress-fit-thumbnail', array( 'class' => 'featured-image aligncenter' ) );
     else:
-      the_post_thumbnail( 'sportspress-standard', array( 'class' => 'fill-image featured-image' ) );
+      the_post_thumbnail( 'themeboy-standard', array( 'class' => 'fill-image featured-image' ) );
     endif;
   elseif ( ! is_single() ):
     echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
-    the_post_thumbnail( 'sportspress-standard-thumbnail', array( 'class' => 'fill-image featured-image' ) );
+    the_post_thumbnail( 'themeboy-standard-thumbnail', array( 'class' => 'fill-image featured-image' ) );
     echo '</a>';
   endif;
   ?>

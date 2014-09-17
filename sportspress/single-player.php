@@ -50,7 +50,7 @@ get_header(); ?>
     <div class="row">
       <div class="large-3 medium-6 columns">
         <div class="player-photo">
-          <?php the_post_thumbnail( 'sportspress-square-thumbnail', array( 'class' => 'fill-image' ) ); ?>
+          <?php the_post_thumbnail( 'themeboy-square-thumbnail', array( 'class' => 'fill-image' ) ); ?>
           <?php if ( $number != null ): ?>
           <h5 class="image-caption">
             <?php _e( 'Number', 'nbrg' ); ?>
@@ -81,7 +81,7 @@ get_header(); ?>
             <div class="player-position">
               <?php
               foreach( $attachments as $attachment ):
-                echo wp_get_attachment_image( $attachment->ID, 'sportspress-square-thumbnail', array( 'class' => 'fill-image' ) );
+                echo wp_get_attachment_image( $attachment->ID, 'themeboy-square-thumbnail', array( 'class' => 'fill-image' ) );
               endforeach;
               ?>
               <h5 class="image-caption"><?php echo $position->name; ?></h5>

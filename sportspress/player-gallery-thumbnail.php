@@ -1,3 +1,13 @@
+<?php
+/**
+ * Player Gallery Thumbnail
+ *
+ * @package WordPress
+ * @subpackage NBRG
+ * @since NBRG 1.0.1
+ * @version 1.0.1
+ */
+?>
 <div class="player-thumbnail large-4 medium-6 small-12 columns left">
   <a href="<?php echo get_post_permalink( $id ); ?>">
     <?php

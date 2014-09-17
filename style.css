@@ -2,14 +2,14 @@
  Theme Name: nbrg-wordpress-theme
  Theme URI: http://www.nbrg.com.au
  Github Theme URI: https://github.com/jagregory/nbrg-wordpress-theme
- Version: 1.0.8
+ Version: 1.0.9
  Template: premier
  Description: NBRG theme designed by <a href="http://www.jagregory.com">James Gregory</a> based on Premier by ThemeBoy.
  Author: James Gregory
  Author URI: http://www.jagregory.com
 */
 
-@import url("../premier.1.0.5/style.css");
+@import url("../premier.1.0.7/style.css");
 
 .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
   font-size: 0.98rem;

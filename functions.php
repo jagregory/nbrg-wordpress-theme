@@ -1,5 +1,5 @@
 <?php
-add_image_size('nbrg-player-thumbnail', 320, 320, array('center', 'top'));
+add_image_size('nbrg-player-thumbnail', 320, 320, array('left', 'top'));
 
 register_sidebar( array(
   'name'        => __( 'Single Post Home Sidebar', 'nbrg' ),

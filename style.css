@@ -36,3 +36,13 @@
 .player-position h5 {
   margin-bottom: 0;
 }
+
+.post-list .post {
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 0.25rem solid #5db4c1;
+}
+
+.post-list .entry-meta, .home-post-list .entry-meta {
+  display: none;
+}

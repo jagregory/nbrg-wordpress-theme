@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="content" class="site-content" role="main">
   <div class="row">
-    <div class="large-7 columns">
+    <div class="large-7 columns home-post-list">
       <?php
       // show the home page content
       while ( have_posts() ) {
